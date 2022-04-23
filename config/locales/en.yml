@@ -41,3 +41,5 @@ en:
   back: "Back"
   update: "Update Book"
   editing_book: "Editing Book"
+  index: "Books"
+  destroy_confirmation: "Are you sure?"

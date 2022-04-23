@@ -10,3 +10,5 @@ jp:
   back: "戻る"
   update: "更新"
   editing_book: "編集"
+  index: "一覧"
+  destroy_confirmation: "本当に削除しますか？"
