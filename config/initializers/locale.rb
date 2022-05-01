@@ -1,4 +1,4 @@
 I18n.load_path += Dir[Rails.root.join('config', 'locale', '*.{rb, yml}')]
-I18n.available_locales = [:en, :jp]
-I18n.default_locale = :jp
+I18n.available_locales = [:en, :ja]
+I18n.default_locale = :ja
 
