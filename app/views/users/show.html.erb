@@ -1,2 +1,13 @@
 <h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+
+<p>
+  <strong>id:</strong>
+  <%= @user.id %>
+</p>
+
+<p>
+  <strong>E-mail:</strong>
+  <%= @user.email %>
+</p>
+
+<%= link_to "ユーザー一覧へ戻る", users_path %>
