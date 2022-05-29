@@ -1,0 +1,19 @@
+ja:
+  activerecord:
+    models:
+      book: "書籍"
+    attributes:
+      book:
+        title: "タイトル"
+        memo: "メモ"
+        author: "著者名"
+        picture: "画像"
+        new_book: "新規登録"
+        show: "詳細"
+        edit: "編集"
+        destroy: "削除"
+        back: "戻る"
+        update: "更新"
+        editing_book: "編集"
+        index: "一覧"
+        destroy_confirmation: "本当に削除しますか？"
