@@ -4,8 +4,13 @@
   <%= render "users/shared/error_messages", resource: resource %>
 
   <div class="field">
+    <%= f.label :nickname %><br />
+    <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname" %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autocomplete: "email" %>
   </div>
 
   <div class="field">
@@ -19,6 +24,21 @@
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :zipcode %><br />
+    <%= f.number_field :zipcode, autofocus: true, autocomplete: "zipcode" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address, autofocus: true, autocomplete: "address" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :introduce %><br />
+    <%= f.text_area :introduce, autofocus: true, autocomplete: "introduce" %>
   </div>
 
   <div class="actions">
