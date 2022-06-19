@@ -1,5 +1,11 @@
 <h1>Users#index</h1>
 
 <% @users.each do |user| %>
-  <p><%= link_to user.email, "/users/#{user.id}" %></p>
+  <tr>
+    <td><%= link_to user.nickname, "/users/#{user.id}" %></td>
+    <td><%= link_to user.email, "/users/#{user.id}" %></td>
+  </tr>
+  <br>
 <% end %>
+<%= link_to "本の一覧へ", books_path %>
+
