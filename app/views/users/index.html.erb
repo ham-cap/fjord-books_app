@@ -6,5 +6,6 @@
   </tr>
   <br>
 <% end %>
+<%= paginate @users %>
 <%= link_to User.human_attribute_name(:link_to_books), books_path %>
 
