@@ -4,8 +4,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
-  
-  def after_update_path_for(resource)
+  def after_update_path_for(_resource)
     users_path
   end
   # GET /resource/sign_up
@@ -18,7 +17,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  #GET /resource/edit
+  # GET /resource/edit
   def edit
     @user = User.find(params[:id])
     if @user.id == current_user.id

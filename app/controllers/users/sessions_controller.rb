@@ -14,9 +14,6 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # DELETE /resource/sign_out
-   def destroy
-     super
-   end
 
   # protected
 
@@ -25,6 +22,7 @@ class Users::SessionsController < Devise::SessionsController
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
   # end
   private
+
   def respond_to_on_destroy
     # We actually need to hardcode this as Rails default responder doesn't
     # support returning empty response on GET request
