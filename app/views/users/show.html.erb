@@ -1,36 +1,36 @@
-<h1>Users#show</h1>
+<h1><%= User.human_attribute_name(:show) %></h1>
 
 <p>
-  <strong>id:</strong>
+  <strong><%= User.human_attribute_name(:id) %>:</strong>
   <%= @user.id %>
 </p>
 
 <p>
-  <strong>ニックネーム:</strong>
+  <strong><%= User.human_attribute_name(:nickname) %>:</strong>
   <%= @user.nickname %>
 </p>
 
 <p>
-  <strong>郵便番号:</strong>
+  <strong><%= User.human_attribute_name(:zipcode) %>:</strong>
   <%= @user.zipcode %>
 </p>
 
 <p>
-  <strong>住所:</strong>
+  <strong><%= User.human_attribute_name(:address) %>:</strong>
   <%= @user.address %>
 </p>
 
 <p>
-  <strong>E-mail:</strong>
+  <strong><%= User.human_attribute_name(:email) %>:</strong>
   <%= @user.email %>
 </p>
 
 <p>
-  <strong>自己紹介:</strong>
+  <strong><%= User.human_attribute_name(:introduce) %>:</strong>
   <%= @user.introduce %>
 </p>
 
-<%= link_to "ユーザー一覧へ戻る", users_path %>
+<%= link_to User.human_attribute_name(:back_to_user_index), users_path %>
 <% if @user.id == current_user.id %>
-  <%= link_to "編集", edit_user_registration_path(id: current_user.id) %>
+  <%= link_to User.human_attribute_name(:edit), edit_user_registration_path(id: current_user.id) %>
 <% end %>

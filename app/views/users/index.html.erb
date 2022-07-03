@@ -1,11 +1,10 @@
-<h1>Users#index</h1>
+<h1><%= User.human_attribute_name(:user_index) %></h1>
 
 <% @users.each do |user| %>
   <tr>
     <td><%= link_to user.nickname, "/users/#{user.id}" %></td>
-    <td><%= link_to user.email, "/users/#{user.id}" %></td>
   </tr>
   <br>
 <% end %>
-<%= link_to "本の一覧へ", books_path %>
+<%= link_to User.human_attribute_name(:link_to_books), books_path %>
 
