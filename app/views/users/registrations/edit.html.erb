@@ -4,27 +4,27 @@
   <%= render "users/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label User.human_attribute_name(:nickname) %><br />
+    <%= f.label User.human_attribute_name(:nickname) %>
     <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname" %>
   </div>
 
   <div class="field">
-    <%= f.label User.human_attribute_name(:email) %><br />
+    <%= f.label User.human_attribute_name(:email) %>
     <%= f.email_field :email, autocomplete: "email" %>
   </div>
 
   <div class="field">
-    <%= f.label User.human_attribute_name(:zipcode) %><br />
+    <%= f.label User.human_attribute_name(:zipcode) %>
     <%= f.text_field :zipcode, autocomplete: "zipcode" %>
   </div>
 
   <div class="field">
-    <%= f.label User.human_attribute_name(:address) %><br />
+    <%= f.label User.human_attribute_name(:address) %>
     <%= f.text_field :address, autocomplete: "address" %>
   </div>
 
   <div class="field">
-    <%= f.label User.human_attribute_name(:introduce) %><br />
+    <%= f.label User.human_attribute_name(:introduce) %>
     <%= f.text_field :introduce, autocomplete: "introduce" %>
   </div>
 
@@ -42,7 +42,7 @@
   </div>
 
   <div class="field">
-    <%= f.label User.human_attribute_name(:password_confirmation) %><br />
+    <%= f.label User.human_attribute_name(:password_confirmation) %>
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 

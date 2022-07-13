@@ -18,14 +18,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # GET /resource/edit
-  def edit
-    @user = User.find(params[:id])
-    if @user.id == current_user.id
-      render action: :edit
-    else
-      redirect_to users_path
-    end
-  end
+  #def edit
+  #   super
+  #end
 
   # PUT /resource/
   # def update
