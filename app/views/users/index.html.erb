@@ -1,0 +1,11 @@
+<h1><%= User.human_attribute_name(:user_index) %></h1>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= link_to user.nickname, "/users/#{user.id}" %></td>
+  </tr>
+  <br>
+<% end %>
+<%= paginate @users %>
+<%= link_to User.human_attribute_name(:link_to_books), books_path %>
+

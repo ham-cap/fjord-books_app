@@ -2,6 +2,7 @@ ja:
   activerecord:
     models:
       book: 本  #g
+      user: ユーザー
 
     attributes:
       book:
@@ -9,3 +10,24 @@ ja:
         memo: メモ  #g
         picture: 画像  #g
         title: 題名  #g
+      user:
+        sign_in: ログイン
+        email: Email
+        password: パスワード
+        remember_me: 次回から自動的にログイン
+        sign_up: 新規登録
+        forget_password: パスワードを忘れた方はこちら
+        reset_password: パスワード再設定
+        nickname: ニックネーム
+        password_confirmation: パスワード（確認用）
+        zipcode: 郵便番号
+        address: 住所
+        introduce: 自己紹介
+        characters_minimum: "%{num}文字以上"
+        send_password_instruction: パスワードの再設定メールを送信
+        user_index: ユーザー一覧
+        link_to_books: 本の一覧へ
+        show: ユーザー詳細
+        id: ユーザーID
+        back_to_user_index: ユーザー一覧へ戻る
+        edit: 編集
