@@ -6,5 +6,8 @@ class FollowsController < ApplicationController
   end
 
   def destroy
+    relationship = current_user.active_relationships.find_by(id: params[:id])
+    relationship.destroy
+    redirect_to users_path
   end
 end
