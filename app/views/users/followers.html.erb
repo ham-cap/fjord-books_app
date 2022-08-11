@@ -1,4 +1,4 @@
-<h1><%= t('views.common.title_followings_index', name: User.model_name.human) %></h1>
+<h1><%= t('views.common.title_followers_index', name: User.model_name.human) %></h1>
 
 <table>
   <thead>
@@ -11,7 +11,7 @@
   </thead>
 
   <tbody>
-    <% @followings.each do |user| %>
+    <% @followers.each do |user| %>
       <tr>
         <th></th>
         <th>

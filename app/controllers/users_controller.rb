@@ -10,9 +10,10 @@ class UsersController < ApplicationController
   end
 
   def followings
-    @followings = current_user.followings
+    @followings = User.find_by(id: params[:id]).followings
   end
 
   def followers
+    @followers = User.find_by(id: params[:id]).followers
   end
 end

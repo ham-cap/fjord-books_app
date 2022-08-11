@@ -32,18 +32,26 @@
     <%= image_tag @user.avatar.variant(resize_to_fill: [150, 150])%>
   <% end %>
 </p>
-
+  <strong><%= t('views.follows.followings') %>:</strong>
+  <%= link_to  @user.followings.count, followings_user_path %>
+<p>
+</p>
+  <strong><%= t('views.follows.followers') %>:</strong>
+  <%= link_to @user.followers.count, followers_user_path %>
+<p>
+  
+</p>
 <% unless current_user == @user %>
   <% if current_user.followings.exists?(id: @user.id) %>
     <%= form_with(model: current_user.active_relationships.find_by(followed_id: @user.id),
                                                                           html: { method: :delete },
                                                                          local: true) do |f| %>
-      <%= f.submit "フォローをやめる" %>
+      <%= f.submit t('views.follows.unfollow_button') %>
     <% end %>
   <% else %>
     <%= form_with(model: current_user.active_relationships.build, local: true) do |f| %>
       <div><%= hidden_field_tag :followed_id, @user.id %></div>
-      <%= f.submit "フォローする" %>
+      <%= f.submit t('views.follows.follow_button') %>
     <% end %>
   <% end %>
 <% end %>
