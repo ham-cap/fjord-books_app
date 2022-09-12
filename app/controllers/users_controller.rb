@@ -14,6 +14,6 @@ class UsersController < ApplicationController
   end
 
   def followers
-    @followers = User.find(params[:id]).followers
+    @followers = User.find(params[:id]).followers.preload(:avatar_attachment)
   end
 end
