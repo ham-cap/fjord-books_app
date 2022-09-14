@@ -8,7 +8,5 @@ Rails.application.routes.draw do
       get :followings, :followers
     end
   end
-  scope ':id' do
-    resources :follows, only: %i(create destroy)
-  end
+  resources :follows, only: %i(create destroy)
 end
