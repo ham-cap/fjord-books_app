@@ -17,7 +17,7 @@
       <tr>
         <th>
           <% if user.avatar.attached? %>
-            <%= image_tag user.avatar.variant(resize_to_fill: [30, 30])%>
+            <%= image_tag user.avatar.variant(resize_to_fill: [30, 30]) %>
           <% end %>
         </th>
         <td><%= user.email %></td>
@@ -29,5 +29,7 @@
     <% end %>
   </tbody>
 </table>
+
+<%= link_to t('views.follows.current_user_followings'), followings_user_path(current_user) %>
 
 <%= paginate @users %>

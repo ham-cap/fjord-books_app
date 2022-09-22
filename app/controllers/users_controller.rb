@@ -7,5 +7,15 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @following = current_user.active_relationships.find_by(followed_id: @user.id)
+    @follow = current_user.active_relationships.build
+  end
+
+  def followings
+    @followings = User.find(id: params[:id]).followings
+  end
+
+  def followers
+    @followers = User.find(params[:id]).followers.preload(:avatar_attachment)
   end
 end
