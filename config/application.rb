@@ -12,7 +12,13 @@ module BooksApp
     config.load_defaults 6.1
     config.time_zone = 'Asia/Tokyo'
     config.active_record.default_timezone = :local
-    # Configuration for the application, engines, and railties goes here.
+    
+    config.generators do |g|
+      g.stylesheets false
+      g.javascripts false
+      g.helper false
+      g.test_framework false
+    end
     #
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
