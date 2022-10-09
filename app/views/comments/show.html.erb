@@ -4,6 +4,5 @@
   <strong>Content:</strong>
   <%= @comment.content %>
 </p>
-
-<%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path %>
+<%= link_to 'Edit', edit_book_comment_path(@comment) %> |
+<%= link_to 'Back', book_path(@comment.commentable_id) %>
