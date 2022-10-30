@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Content:</strong>
+<strong><%= Comment.human_attribute_name('content') %>:</strong>
   <%= @comment.content %>
 </p>
 <% if @comment.commentable_type == "Book" %>
-  <%= link_to 'Back', book_path(@comment.commentable_id) %>
+  <%= link_to t('views.common.back'), book_path(@comment.commentable_id) %>
 <% else %>
-  <%= link_to 'Back', report_path(@comment.commentable_id) %>
+  <%= link_to t('views.common.back'), report_path(@comment.commentable_id) %>
 <% end %>
