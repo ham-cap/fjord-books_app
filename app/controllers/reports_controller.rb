@@ -18,12 +18,10 @@ class ReportsController < ApplicationController
   # GET /reports/new
   def new
     @report = Report.new
-    @user_id = current_user.id
   end
 
   # GET /reports/1/edit
   def edit
-    @user_id = current_user.id
   end
 
   # POST /reports
