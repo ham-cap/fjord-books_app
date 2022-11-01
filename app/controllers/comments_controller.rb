@@ -4,7 +4,9 @@ class CommentsController < ApplicationController
   before_action :set_comment, only: %i[show edit update destroy]
 
   # GET /comments/1
-  def show; end
+  def show;
+    @commentable_path = @comment.commentable_type == "Book" ? book_path(@comment.commentable_id) : report_path(@comment.commentable_id)
+  end
 
   # POST /comments
   def create

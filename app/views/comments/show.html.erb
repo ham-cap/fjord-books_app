@@ -4,8 +4,7 @@
 <strong><%= Comment.human_attribute_name('content') %>:</strong>
   <%= @comment.content %>
 </p>
-<% if @comment.commentable_type == "Book" %>
-  <%= link_to t('views.common.back'), book_path(@comment.commentable_id) %>
-<% else %>
-  <%= link_to t('views.common.back'), report_path(@comment.commentable_id) %>
-<% end %>
+
+<p>
+<%= link_to t('views.common.back'), @commentable_path %>
+</p>
