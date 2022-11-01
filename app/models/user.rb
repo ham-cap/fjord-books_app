@@ -32,4 +32,12 @@ class User < ApplicationRecord
     relationship = active_relationships.find_by(following_id: user.id)
     relationship&.destroy!
   end
+
+  def display_name_or_email(comment)
+    if comment.user.name
+      comment.user.name
+    else
+      comment.user.email
+    end
+  end
 end

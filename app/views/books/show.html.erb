@@ -32,13 +32,9 @@
   <tbody>
     <% @comments.each do |comment| %>
       <tr>
-        <% if comment.user.name %>
-          <td><%= comment.user.name %></td>
-        <% else %>
-          <td><%= comment.user.email %></td>
-        <% end %>
+        <td><%= comment.user.display_name_or_email(comment) %></td>
         <td><%= comment.content %></td>
-        <td><%= comment.created_at.strftime("%Y年%-m月%-d日%H時%M分") %></td>
+        <td><%= I18n.l(comment.created_at, format: :custom) %></td>
       </tr>
     <% end %>
   </tbody>
