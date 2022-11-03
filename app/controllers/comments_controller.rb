@@ -5,7 +5,6 @@ class CommentsController < ApplicationController
 
   # GET /comments/1
   def show;
-    @commentable_path = @comment.commentable_type == "Book" ? book_path(@comment.commentable_id) : report_path(@comment.commentable_id)
   end
 
   # POST /comments
