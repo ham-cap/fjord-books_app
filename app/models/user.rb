@@ -34,10 +34,6 @@ class User < ApplicationRecord
   end
 
   def display_name_or_email(comment)
-    if comment.user.name
-      comment.user.name
-    else
-      comment.user.email
-    end
+    comment.user.name || comment.user.email
   end
 end
