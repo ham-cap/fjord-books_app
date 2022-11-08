@@ -20,5 +20,27 @@
   <%= image_tag(@book.picture_url) if @book.picture.present? %>
 </p>
 
+<table>
+  <thead>
+    <tr>
+      <th><%= Comment.human_attribute_name(:contributer) %></th>
+      <th><%= Comment.human_attribute_name(:content) %></th>
+      <th><%= Comment.human_attribute_name(:posted_date_and_time) %></th>
+    </tr>
+  </thead>
+  <h2><%= Comment.human_attribute_name(:index_of_comments) %></h2>
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.user.display_name_or_email(comment) %></td>
+        <td><%= comment.content %></td>
+        <td><%= I18n.l(comment.created_at, format: :custom) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= render 'comments/form', comment: @book.comments.build, book: @book %>
+
 <%= link_to t('views.common.edit'), edit_book_path(@book) %> |
 <%= link_to t('views.common.back'), books_path %>
