@@ -15,7 +15,7 @@ class BooksTest < ApplicationSystemTestCase
     assert_selector 'h1', text: '本'
   end
 
-  test 'creating and destroying a Book' do
+  test 'creating a Book' do
     visit books_url
     click_on '新規作成'
     fill_in 'タイトル', with: 'hogehoge'
