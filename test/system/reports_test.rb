@@ -4,8 +4,6 @@ require 'application_system_test_case'
 
 class ReportsTest < ApplicationSystemTestCase
   setup do
-    @report = reports(:one)
-
     visit root_url
     fill_in 'Eメール', with: 'alice@example.com'
     fill_in 'パスワード', with: 'password'
@@ -20,26 +18,32 @@ class ReportsTest < ApplicationSystemTestCase
   test 'creating a Report' do
     visit reports_url
     click_on '新規作成'
-    fill_in 'タイトル', with: @report.title
-    fill_in '内容', with: @report.content
+    fill_in 'タイトル', with: 'hogehoge'
+    fill_in '内容', with: 'fugafuga'
     click_on '登録する'
     assert_text '日報が作成されました。'
+    click_on '戻る'
+    assert_text 'hogehoge'
   end
 
   test 'updating a Report' do
     visit reports_url
     click_on '編集', match: :prefer_exact
-    fill_in 'タイトル', with: @report.title
-    fill_in '内容', with: @report.content
+    fill_in 'タイトル', with: 'Foo'
+    fill_in '内容', with: 'Bar'
     click_on '更新する'
     assert_text '日報が更新されました。'
+    click_on '戻る'
+    assert_text 'Foo'
   end
 
   test 'destroying a Report' do
     visit reports_url
+    assert_text 'foo'
     page.accept_confirm do
       click_on '削除', match: :first
     end
     assert_text '日報が削除されました。'
+    assert_no_text 'foo'
   end
 end
